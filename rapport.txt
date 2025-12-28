@@ -1,0 +1,45 @@
+RAPPORT DE LABORATOIRE 10 : MIGRATION ET EXPORT DE DONNEES
+Cours : Bases de Données
+Étudiant : [VOTRE NOM]
+
+OBJECTIF
+Analyse comparative des différentes méthodes de migration de données testées entre l'environnement de développement (universite_dev) et de production (universite_prod).
+
+1. MYSQLDUMP (Méthode Classique)
+- Avantages : 
+  * Outil standard pré-installé sur presque tous les serveurs MySQL.
+  * Génère du SQL lisible et éditable manuellement (pratique pour le débogage).
+  * Très grande flexibilité grâce aux options de filtrage (--where, --no-data).
+- Inconvénients : 
+  * Processus "Single-threaded" (une seule tâche à la fois), ce qui le rend lent pour les bases de données très volumineuses (Big Data).
+  * La restauration est plus lente car le serveur doit réexécuter toutes les requêtes SQL.
+
+2. MYSQLPUMP (Sauvegarde Parallèle)
+- Avantages : 
+  * Conçu pour être le successeur moderne de mysqldump.
+  * Supporte le parallélisme (multithreading), ce qui accélère considérablement l'exportation.
+  * Meilleure gestion native de la compression (ZLIB/LZ4).
+- Inconvénients : 
+  * Syntaxe légèrement différente de mysqldump.
+  * Moins universellement adopté, peut poser des soucis de compatibilité sur de très vieilles versions.
+
+3. MYSQL SHELL / CLONE (Copie Physique)
+- Avantages : 
+  * Méthode la plus rapide existante pour une migration complète.
+  * Effectue une copie physique des fichiers (InnoDB) au lieu d'une copie logique (SQL).
+  * Idéal pour provisionner rapidement un serveur esclave (Replica).
+- Inconvénients : 
+  * Approche destructrice : écrase totalement la base de destination (pas de fusion possible).
+  * Nécessite l'installation du plugin Clone sur le serveur.
+
+4. MYSQL WORKBENCH (Migration Wizard)
+- Avantages : 
+  * Interface graphique (GUI) très intuitive, aucune ligne de commande requise.
+  * Guide l'utilisateur étape par étape (Wizard).
+  * Permet des migrations complexes depuis d'autres SGBD (ex: SQL Server vers MySQL).
+- Inconvénients : 
+  * Impossible à automatiser via des scripts (cron/tâches planifiées).
+  * Performances dépendantes de la machine cliente et de la stabilité du réseau.
+
+CONCLUSION
+Pour l'automatisation quotidienne (sauvegardes, environnements de dev), mysqldump couplé à un script Bash/PowerShell reste la solution la plus robuste. Pour la mise en place initiale d'une architecture de production ou de réplication, MySQL Shell est supérieur en termes de performance.
