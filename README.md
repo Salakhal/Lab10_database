@@ -50,4 +50,14 @@ Nous avons exploré plusieurs méthodes :
 <img width="1234" height="742" alt="image" src="https://github.com/user-attachments/assets/f2d17050-6be5-46e2-852b-3a6fa2d39cb7" />
 
 
+## 👤 Auteur
 
+* **École Normale Supérieure de Marrakech**
+  
+* **Réalisé par :** SALMA LAKHAL
+  
+* **Filière  :** CLE_INFO_S5
+
+* **Encadré par :** Pr. Mohamed LACHGAR
+
+* **Module :**  BASE DE DOONER
