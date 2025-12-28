@@ -1,7 +1,4 @@
 # Lab 10 : Migration, Import/Export et Automatisation MySQL
-**Cours :** Bases de Données  
-**Étudiant :** [TON NOM ICI]  
-**Date :** 28/12/2024
 
 ---
 
@@ -35,3 +32,11 @@ Nous avons exploré plusieurs méthodes :
 * Client MySQL (Terminal ou Workbench).
 *  PowerShell (Windows).
 
+
+## Captures d'écran :
+
+### Export des fichiers
+
+
+
+### Vérification en Production
