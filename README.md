@@ -37,6 +37,17 @@ Nous avons exploré plusieurs méthodes :
 
 ### Export des fichiers
 
+<img width="1422" height="621" alt="image" src="https://github.com/user-attachments/assets/f152a031-b1b0-4d59-8293-c4e1eacdefbf" />
+
 
 
 ### Vérification en Production
+
+<img width="1434" height="680" alt="image" src="https://github.com/user-attachments/assets/aee5d979-5783-4da2-9b19-7f964c6d16ff" />
+
+---
+
+<img width="1234" height="742" alt="image" src="https://github.com/user-attachments/assets/f2d17050-6be5-46e2-852b-3a6fa2d39cb7" />
+
+
+
